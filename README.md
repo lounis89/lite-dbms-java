@@ -4,6 +4,11 @@ Ce projet a été réalisé avec 3 collègues @ Université Paris Descartes en 2
 
 Ce projet se base sur les concepts se trouvant dans le livre [Database Management Systems 3ed, R. Ramakrishnan et J. Gehrke](https://pages.cs.wisc.edu/~dbbook/).  
 
+## Architecture  
+L'application a été décomposée en couche comme sur ce schéma réalisé par R. Ramakrishnan et J. Gehrke  
+  
+<img src="https://i.imgur.com/bhPOt6j.png"  width="20%" height="20%">  
+
 # Utilisation
 ### Créer une table:
 ```
