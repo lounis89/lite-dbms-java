@@ -1,39 +1,39 @@
 # DBMS in Java
 
-Ce projet a été réalisé avec 3 collègues @ Université Paris Descartes en 2018/2019 pour l'UE base de données avancées. Le but était de créer un SGBD (système de gestion de bases de données) en ligne de commande afin de comprendre son fonctionnement en partant de la gestion des fichiers/stockages sur disque jusqu'à la création de requêtes avec une syntaxe SQL et le traitement de celles-ci.
+This project was created in 2018/2019 at the University of Paris Descartes for the Advanced Database course. The goal was to create a command-line DBMS (database management system) to understand its functioning from file/storage management on disk to the creation of queries using SQL syntax and their processing.
 
-Ce projet se base sur les concepts se trouvant dans le livre [Database Management Systems 3ed, R. Ramakrishnan et J. Gehrke](https://pages.cs.wisc.edu/~dbbook/).  
+This project is based on the concepts presented in the book [Database Management Systems 3ed, R. Ramakrishnan et J. Gehrke](https://pages.cs.wisc.edu/~dbbook/).  
 
 ## Architecture  
-L'application a été décomposée en couche comme sur ce schéma réalisé par R. Ramakrishnan et J. Gehrke  
+The application has been decomposed into layers, as shown in this diagram created by R. Ramakrishnan et J. Gehrke  
   
 <img src="https://i.imgur.com/bhPOt6j.png"  width="20%" height="20%">  
 
 # Utilisation
-### Créer une table:
+### Creating a table:
 ```
-create <nom_rel> <nb_colonnes> <type_nième_col>
+create <rel_name> <nb_columns> <type_nth_col>
 ```
 
-### Insertion de tuples :
+### Inserting tuples:
 
 ``` 
-insert <nom_rel> <val_de_la_nième_col>
-fill <nom_rel> <nom_fichier>
+insert <rel_name> <val_of_nth_col>
+fill <rel_name> <file_name>
 ``` 
-### Affichage de tuples :
+### Displaying tuples:
 ``` 
-selectall <nom_rel>
-select <nom_rel> <num_col_filtrée> <valeur_filtre>
-join <nom_rel_1> <nom_rel_2> <col_rel_1> <col_rel_2>
+selectall <rel_name>
+select <rel_name> <filtered_col_num> <filtered_value>
+join <rel_name_1> <rel_name_2> <rel_col_1> <rel_col_2>
 ``` 
 
-### Clean/vacuum de la base :
+### Cleaning/vacuuming the database:
 ``` 
 clean
 ``` 
 
-### Quitter la console et mettre fin au programme :
+### Exiting the console and terminating the program:
 ``` 
 exit
 ``` 
