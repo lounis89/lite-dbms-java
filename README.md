@@ -9,6 +9,8 @@ The application has been decomposed into layers, as shown in this diagram create
   
 <img src="https://i.imgur.com/bhPOt6j.png"  width="20%" height="20%">  
 
+Create a directory named /DB at under the working directory  
+
 # Utilisation
 ### Creating a table:
 ```
