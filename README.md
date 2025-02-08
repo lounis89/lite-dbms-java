@@ -1,8 +1,59 @@
 # DBMS in Java
 
-This project was created in 2018/2019 at the University of Paris Descartes for the Advanced Database course. The goal was to create a command-line DBMS (database management system) to understand its functioning from file/storage management on disk to the creation of queries using SQL syntax and their processing.
+This project is a simplified Database Management System (DBMS) implementation in Java, created at the University of Paris Descartes. It demonstrates the core concepts of database systems, from low-level disk management to SQL-like query processing.
 
-This project is based on the concepts presented in the book [Database Management Systems 3ed, R. Ramakrishnan et J. Gehrke](https://pages.cs.wisc.edu/~dbbook/).
+## Project Overview
+
+The system is built using a layered architecture, implementing key DBMS components:
+
+### Storage Layer
+- **DiskManager**: Handles low-level file operations and page allocation
+- **BufferManager**: Implements buffer management with a LRU (Least Recently Used) replacement policy
+- **Frame**: Represents a page in memory with pinCount management
+
+### Record Management
+- **Record**: Manages individual database records
+- **RecordId**: Unique identifier for records
+- **PageId**: Identifies pages within files
+
+### Schema Management
+- **DBDef**: Database schema definition and catalog management
+- **RelDef**: Relation (table) definition
+- **ColInfo**: Column information including types and constraints
+
+### Query Processing
+Supports basic SQL-like operations:
+- Table creation
+- Record insertion (single and batch)
+- Selection (with filtering)
+- Join operations
+- Full table scans
+
+## Technical Details
+
+### Storage Management
+- Pages are the basic unit of storage (fixed size)
+- Implements buffer management to minimize disk I/O
+- Uses a catalog file (`Catalog.def`) to persist database metadata
+
+### Data Types
+Supports basic data types:
+- INTEGER
+- REAL
+- VARCHAR
+
+### File Organization
+```
+project-root/
+├── DB/                    # Database files directory
+│   └── Catalog.def       # System catalog
+├── src/
+│   ├── main/java/
+│   │   ├── bdda/        # Core DBMS components
+│   │   └── exception/   # Custom exceptions
+│   └── test/java/
+│       └── tests/       # Unit tests
+```
 
 ## Architecture
 The application has been decomposed into layers, as shown in this diagram created by R. Ramakrishnan et J. Gehrke
