@@ -1,5 +1,6 @@
 package bdda;
 
+import exception.ReqException;
 import exception.SGBDException;
 
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class BufferManager {
 
     // il faut toujours incrementer le pin_count
 
-    /** Retourne un des buffers qui stockent le contenu d’une page dans une des cases
+    /** Retourne un des buffers qui stockent le contenu d'une page dans une des cases
      * @param iPageId l'ID de la page en question
      *
      * @return un des buffer qui stockent le contenu de la page
