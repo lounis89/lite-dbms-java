@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 import bdda.BufferManager;
 import bdda.Constantes;
@@ -28,7 +29,7 @@ class BufferTest {
 
 			dm.addPage(10, pid);
 			System.out.println(pid.getPageIdx());
-			assertTrue(pid.getFileIdx() == 10 && pid.getPageIdx() == 0);
+			assertEquals(pid.getPageIdx(), 0);
 			dm.addPage(10, pid2);
 			assertTrue(pid2.getFileIdx() == 10 && pid2.getPageIdx() == 1);
 			dm.addPage(10, pid3);

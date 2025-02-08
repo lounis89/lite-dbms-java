@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 import exception.ReqException;
 import exception.SGBDException;
+import bdda.BufferManager;
+import bdda.Constantes;
+import bdda.DBDef;
 
 public class Main {
 	public static void main(String[] args) throws SGBDException {
